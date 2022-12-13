@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(32, 32, 32);
+}
+
+nav{
+    margin: 5em 4%;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    
+    h2{
+        font-size: 4rem;
+        color: white;
+        
+        span{
+            color: orangered;
+        }
+    }
+
+    ul{
+        display: none;
+        align-items: center;
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                font-size: 2.5rem;
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .hamburger_menu{
+        display: flex;
+        justify-content: end;
+        z-index: 9999;
+        button{
+            background: transparent;
+            border: none;
+            cursor: pointer;
+
+            svg{
+                width: 5em;
+                height: 5em;
+            }
+        }
+    }
+}
+
+.sidebar_active{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 3em;
+    background-color: rgb(39, 39, 39);
+    top: 0;
+    right: 0;
+    width: 800px;
+    position: fixed;
+    height: 100vh;
+    padding: 15em 0 0 0;
+    transition: all .4s ease;
+    
+    li{
+        border-bottom: 0.5em solid orangered;
+        padding: 1em;
+        transition: .4s;
+
+        &:hover{
+            width: 100%;
+            background-color: rgb(71, 71, 71);
+            text-align: center;
+            transition: .4s;
+        }
+    }
+}
