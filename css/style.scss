@@ -33,6 +33,61 @@ $lightBlue: #E7F6F2;
     background: #555; 
   }
 
+
+
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: .4s all ease-out;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }  
+
+
+  .active.fade-bottom {
+    animation: fade-bottom .6s ease-in;
+  }
+  .active.fade-left {
+    animation: fade-left .4s ease-out;
+  }
+  .active.fade-right {
+    animation: fade-right .6s ease;
+  }
+
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-60%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-right {
+    0% {
+      transform: translateX(90%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
 body{
     background-color: $dark;
 }
@@ -87,6 +142,10 @@ nav{
     }   
 }
 
+.topnav{
+    transition: .4s;
+}
+
 .sidebar_active{
     position: fixed;
     display:flex;
@@ -101,6 +160,18 @@ nav{
     height: 100vh;
     padding: 10em 0 0 0;
     z-index: 99;
+    transition: 1s;
+    animation: toggle .4s ease;
+
+    @keyframes toggle {
+        from{
+            right: -100%
+        }
+
+        to{
+            right: 0;
+        }
+    }
 
     li{
         border-bottom: 0.1em solid $skyblue;
@@ -118,6 +189,7 @@ nav{
 
 main{
     margin: 0 4%;
+    height: 100vh;
     
     .content{
         padding: 14em 0 0 0;
