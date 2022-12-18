@@ -395,7 +395,7 @@ main .image img {
 .skills .skills_container .skill_box i {
   font-size: 2rem;
   margin: auto;
-  color: #E7F6F2;
+  color: #A5C9CA;
   padding: 0.2em;
 }
 .skills .skills_container .skill_box .deviocon {
@@ -409,7 +409,7 @@ main .image img {
 }
 .skills .skills_container .skill_box p {
   text-align: center;
-  color: #A5C9CA;
+  color: #E7F6F2;
   font-size: 1.2rem;
 }
 .skills .skills_container .skill_box:hover {
@@ -584,7 +584,7 @@ footer .end {
 }
 @media only screen and (min-width: 900px) {
   * {
-    font-size: 16px;
+    font-size: 15.3px;
   }
   .about .main {
     display: grid;
