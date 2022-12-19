@@ -316,6 +316,7 @@ main .image img {
   width: 100%;
   margin-left: 50%;
   transform: translate(-50%);
+  filter: drop-shadow(2px 2px 8px black);
 }
 .about .main .about-text {
   width: 100%;
